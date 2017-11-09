@@ -15,5 +15,5 @@ function randItem(items) {
 
 // returns the number passed in with a precision number of digits after the decimal point
 function toPrecision(number, precision) {
-    return +((number).toFixed());
+    return +((number).toFixed(precision));
 }
