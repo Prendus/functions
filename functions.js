@@ -5,7 +5,7 @@ function randInt(min, max) {
 
 // returns a random float between min (included) and max (included)
 function randFloat(min, max) {
-  return Math.random() * (max - min + 1) + min;
+  return Math.random() * (max - 1 - min + 1) + min;
 }
 
 // returns a random item from the list of items passed in
