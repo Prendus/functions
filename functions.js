@@ -17,3 +17,17 @@ function randItem(items) {
 function toPrecision(number, precision) {
     return +((number).toFixed(precision));
 }
+
+// shuffles items and returns a new array. Based on the modern Fisher-Yates shuffle algorithm
+function shuffleItems(items) {
+	return items.reduce((result, item, index) => {
+  	if (index === items.length - 1) {
+    	return result;
+    }
+  
+  	const jindex = Math.floor(Math.random() * (items.length - 1 - index + 1)) + index;
+    [result[index], result[jindex]] = [result[jindex], result[index]];
+    
+    return result;
+  }, items);
+}
